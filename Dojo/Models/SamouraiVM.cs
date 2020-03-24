@@ -11,5 +11,7 @@ namespace Dojo.Models
         public Samourai Samourai { get; set; }
         public List<Arme> Armes { get; set; }
         public int? SelectedArme { get; set; }
+        public List<ArtMartial> ArtMartiaux { get; set; }
+        public List<int> SelectedArtMartiaux { get; set; }
     }
 }

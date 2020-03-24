@@ -1,0 +1,51 @@
+﻿@model BO.Samourai
+
+<h4>Samourai</h4>
+<hr />
+<dl class="dl-horizontal">
+
+    @* NOM *@
+    <dt>
+        @Html.DisplayNameFor(model => model.Nom)
+    </dt>
+
+    <dd>
+        @Html.DisplayFor(model => model.Nom)
+    </dd>
+
+    @* FORCE *@
+    <dt>
+        @Html.DisplayNameFor(model => model.Force)
+    </dt>
+
+    <dd>
+        @Html.DisplayFor(model => model.Force)
+    </dd>
+
+    @* ARME *@
+    <dt>
+        @Html.DisplayNameFor(model => model.Arme)
+    </dt>
+
+    <dd>
+        @Html.DisplayFor(model => model.Arme.Nom)
+    </dd>
+
+    @* ARTS MARTIAUX *@
+    <dt>
+        @Html.DisplayNameFor(model => model.ArtsMartiaux)
+    </dt>
+
+    <dd>
+        @Html.ListBoxFor(model => model.ArtsMartiaux, Model.ArtsMartiaux.Select(ar => new SelectListItem { Value = ar.Nom, Text = ar.Nom }))
+    </dd>
+
+    @* Potentiel  *@
+    <dt>
+        Potentiel :
+    </dt>
+
+    <dd>
+        @ViewBag.potentiel
+    </dd>
+</dl>

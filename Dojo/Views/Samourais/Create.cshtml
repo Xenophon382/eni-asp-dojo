@@ -39,6 +39,13 @@
         </div>
     </div>
 
+    <div class="form-group">
+        @Html.LabelFor(model => model.Samourai.ArtsMartiaux, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.ListBoxFor(model => model.SelectedArtMartiaux, Model.ArtMartiaux.Select(ar => new SelectListItem { Text = ar.Nom, Value = ar.Id.ToString() }), new { htmlAttributes = new { @class = "form-control" } })
+        </div>
+    </div>
+
 
     <div class="form-group">
         <div class="col-md-offset-2 col-md-10">

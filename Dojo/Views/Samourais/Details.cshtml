@@ -7,28 +7,17 @@
 <h2>Details</h2>
 
 <div>
-    <h4>Samourai</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.Force)
-        </dt>
+    @Html.Partial("_SamouraiDetails")
 
-        <dd>
-            @Html.DisplayFor(model => model.Force)
-        </dd>
+    @using (Html.BeginForm("DetacherArme", "Samourais"))
+    {
+        @Html.AntiForgeryToken()
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Nom)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Nom)
-        </dd>
-
-    </dl>
+    <div class="form-actions no-color">
+        <input type="hidden" name="id" value="@Model.Id" />
+        <input type="submit" value="DetacherArme" class="btn btn-default" /> |
+        @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+        @Html.ActionLink("Back to List", "Index")
+    </div>
+    }
 </div>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>
