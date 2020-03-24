@@ -13,7 +13,7 @@ namespace Dojo.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "202003241033467_init"; }
+            get { return "202003241521198_init"; }
         }
         
         string IMigrationMetadata.Source
